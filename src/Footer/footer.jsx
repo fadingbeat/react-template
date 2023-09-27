@@ -19,7 +19,7 @@ export default function Footer() {
               </ul>
             </nav>
           </Col>
-          <Col style={{ paddingTop: "3px" }}>
+          <Col className="footer-col-2" style={{ paddingTop: "3px" }}>
             <nav>
               <ul>
                 <li>
