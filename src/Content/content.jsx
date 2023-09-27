@@ -9,7 +9,7 @@ import woofcontent from "../Assets/content/woofcontent.png";
 
 export default function Content() {
   return (
-    <div>
+    <div className="content">
       <img
         src={headline_imagecontent}
         style={{ width: "100%" }}

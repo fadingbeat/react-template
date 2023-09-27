@@ -16,6 +16,8 @@ import img_5gallery from "../Assets/gallery/img_5gallery.png";
 import img_6gallery from "../Assets/gallery/img_6gallery.png";
 import img_7gallery from "../Assets/gallery/img_7gallery.png";
 import img_8gallery from "../Assets/gallery/img_8gallery.png";
+import arrow_leftgallery from "../Assets/gallery/arrow_leftgallery.png";
+import arrow_rightgallery from "../Assets/gallery/arrow_rightgallery.png";
 
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -48,14 +50,13 @@ class Gallery extends Component {
           nav={true}
           dots={false}
           navContainerClass={true}
-          // navClass={true}
-          // center={true}
+          // navText={["", ""]}
           responsiveClass={true}
           responsive={this.state.responsive}
         >
-          <Image src={Rectangle2gallery} fluid />
-          <Image src={Rectanglegallery} fluid />
-          <Image src={Rectangle3gallery} fluid />
+          <Image src={Rectangle3gallery} />
+          <Image src={Rectanglegallery} />
+          <Image src={Rectangle2gallery} />
         </OwlCarousel>
 
         <Container>
