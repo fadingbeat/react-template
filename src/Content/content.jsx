@@ -9,10 +9,10 @@ import woofcontent from "../Assets/content/woofcontent.png";
 
 export default function Content() {
   return (
-    <div>
+    <div className="content">
       <img
         src={headline_imagecontent}
-        style={{ width: "100%", "min-width": "440px" }}
+        style={{ width: "100%" }}
         alt="Cat lying by the window"
       />
 
@@ -53,7 +53,12 @@ export default function Content() {
             style={{ display: "flex", flexDirection: "row-reverse" }}
           >
             <Col>
-              <Image src={woofcontent} alt="Dog lying on the ground" fluid />
+              <Image
+                className="flex-image-dog"
+                src={woofcontent}
+                alt="Dog lying on the ground"
+                fluid
+              />
             </Col>
             <Col xl={8} xs={12}>
               <h2 className="content-row-dog-subtitle">The dog</h2>
