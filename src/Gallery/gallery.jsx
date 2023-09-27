@@ -1,4 +1,7 @@
 import { Component } from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 import Image from "react-bootstrap/Image";
 import Rectanglegallery from "../Assets/gallery/Rectanglegallery.png";
@@ -55,16 +58,43 @@ class Gallery extends Component {
           <Image src={Rectangle3gallery} fluid />
         </OwlCarousel>
 
-        <div>
-          <Image src={img_1gallery} fluid />
-          <Image src={img_2gallery} fluid />
-          <Image src={img_3gallery} fluid />
-          <Image src={img_4gallery} fluid />
-          <Image src={img_5gallery} fluid />
-          <Image src={img_6gallery} fluid />
-          <Image src={img_7gallery} fluid />
-          <Image src={img_8gallery} fluid />
-        </div>
+        <Container>
+          <Row xs={2} sm={4} md={4} xl={4} style={{ paddingBottom: "30px" }}>
+            <Col>
+              {" "}
+              <Image src={img_1gallery} fluid />
+            </Col>
+            <Col>
+              {" "}
+              <Image src={img_2gallery} fluid />
+            </Col>
+            <Col>
+              {" "}
+              <Image src={img_3gallery} fluid />
+            </Col>
+            <Col>
+              <Image src={img_4gallery} fluid />
+            </Col>
+          </Row>
+          <Row xs={2} sm={4} md={4} xl={4} style={{ paddingBottom: "30px" }}>
+            <Col>
+              {" "}
+              <Image src={img_5gallery} fluid />
+            </Col>
+            <Col>
+              {" "}
+              <Image src={img_6gallery} fluid />
+            </Col>
+            <Col>
+              {" "}
+              <Image src={img_7gallery} fluid />
+            </Col>
+            <Col>
+              {" "}
+              <Image src={img_8gallery} fluid />
+            </Col>
+          </Row>
+        </Container>
       </div>
     );
   }

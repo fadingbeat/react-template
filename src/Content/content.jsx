@@ -12,7 +12,7 @@ export default function Content() {
     <div>
       <img
         src={headline_imagecontent}
-        style={{ width: "100%", "min-width": "440px" }}
+        style={{ width: "100%" }}
         alt="Cat lying by the window"
       />
 
