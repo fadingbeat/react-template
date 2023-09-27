@@ -28,6 +28,63 @@
   margin-bottom: 75px;
 }
 
+/* Gallery component */
+.text-center.subtitle {
+  font-size: 52px;
+  line-height: 60.94px;
+  letter-spacing: 0.23px;
+  margin-top: 74px;
+}
+
+/* Owl carousel items */
+.owl-carousel .owl-item img {
+  width: unset !important;
+}
+/* .owl-item.active {
+  width: unset !important;
+} */
+
+.owl-carousel .owl-item img {
+  display: initial;
+  width: 33%;
+}
+
+.owl-carousel.owl-theme.owl-loaded.owl-drag {
+  margin-bottom: 4em;
+}
+
+.owl-carousel.owl-theme.owl-loaded.owl-drag div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  margin-top: 4em;
+}
+
+.owl-carousel button.owl-prev,
+.owl-carousel button.owl-next {
+  background: none;
+  border: none;
+  font-size: 0;
+  margin: 0 5%;
+}
+
+.owl-carousel button.owl-prev::before {
+  content: "";
+  background: url("./Assets/gallery/arrow-leftgallery.png");
+  background-size: cover;
+  position: absolute;
+  width: 59.58px;
+  height: 43px;
+  margin-left: -20px;
+}
+.owl-carousel button.owl-next::before {
+  content: "";
+  background: url("./Assets/gallery/arrow-rightgallery.png");
+  background-size: cover;
+  position: absolute;
+  width: 59.58px;
+  height: 43px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
