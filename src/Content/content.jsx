@@ -53,7 +53,12 @@ export default function Content() {
             style={{ display: "flex", flexDirection: "row-reverse" }}
           >
             <Col>
-              <Image src={woofcontent} alt="Dog lying on the ground" fluid />
+              <Image
+                className="flex-image-dog"
+                src={woofcontent}
+                alt="Dog lying on the ground"
+                fluid
+              />
             </Col>
             <Col xl={8} xs={12}>
               <h2 className="content-row-dog-subtitle">The dog</h2>

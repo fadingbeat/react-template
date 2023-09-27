@@ -79,6 +79,8 @@
   border: none;
   font-size: 0;
   margin: 0 5%;
+  margin-top: 74px;
+  margin-bottom: 107px;
 }
 
 .owl-carousel button.owl-prev::before {
@@ -137,17 +139,52 @@
   line-height: 36px;
 }
 
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d1d1d;
+  color: #fff;
+  padding: 4em;
+}
+.form-select {
+  width: 13em;
+}
+/* Animations */
+
+.flex-image-cat,
+.flex-image-dog {
+  animation: x-axis-animation-together 1s ease-in-out 0s infinite alternate;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .col-image:hover {
+    animation: gallery 4s ease-out 1s infinite alternate;
   }
 }
 
-@keyframes App-logo-spin {
+@keyframes x-axis-animation-together {
   from {
-    transform: rotate(0deg);
+    transform: rotateX(20deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotateX(-20deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .col-image:hover {
+    animation: gallery-animation 2s ease-in;
+  }
+}
+
+@keyframes gallery-animation {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: scale(1);
   }
 }

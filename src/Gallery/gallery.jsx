@@ -16,8 +16,6 @@ import img_5gallery from "../Assets/gallery/img_5gallery.png";
 import img_6gallery from "../Assets/gallery/img_6gallery.png";
 import img_7gallery from "../Assets/gallery/img_7gallery.png";
 import img_8gallery from "../Assets/gallery/img_8gallery.png";
-import arrow_leftgallery from "../Assets/gallery/arrow_leftgallery.png";
-import arrow_rightgallery from "../Assets/gallery/arrow_rightgallery.png";
 
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -50,7 +48,6 @@ class Gallery extends Component {
           nav={true}
           dots={false}
           navContainerClass={true}
-          // navText={["", ""]}
           responsiveClass={true}
           responsive={this.state.responsive}
         >
@@ -62,37 +59,30 @@ class Gallery extends Component {
         <Container>
           <Row xs={2} sm={4} md={4} xl={4} style={{ paddingBottom: "30px" }}>
             <Col>
-              {" "}
-              <Image src={img_1gallery} fluid />
+              <Image className="col-image" src={img_1gallery} fluid />
             </Col>
             <Col>
-              {" "}
-              <Image src={img_2gallery} fluid />
+              <Image className="col-image" src={img_2gallery} fluid />
             </Col>
             <Col>
-              {" "}
-              <Image src={img_3gallery} fluid />
+              <Image className="col-image" src={img_3gallery} fluid />
             </Col>
             <Col>
-              <Image src={img_4gallery} fluid />
+              <Image className="col-image" src={img_4gallery} fluid />
             </Col>
           </Row>
           <Row xs={2} sm={4} md={4} xl={4} style={{ paddingBottom: "30px" }}>
             <Col>
-              {" "}
-              <Image src={img_5gallery} fluid />
+              <Image className="col-image" src={img_5gallery} fluid />
             </Col>
             <Col>
-              {" "}
-              <Image src={img_6gallery} fluid />
+              <Image className="col-image" src={img_6gallery} fluid />
             </Col>
             <Col>
-              {" "}
-              <Image src={img_7gallery} fluid />
+              <Image className="col-image" src={img_7gallery} fluid />
             </Col>
             <Col>
-              {" "}
-              <Image src={img_8gallery} fluid />
+              <Image className="col-image" src={img_8gallery} fluid />
             </Col>
           </Row>
         </Container>
