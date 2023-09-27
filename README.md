@@ -1,10 +1,12 @@
-# Getting Started with Create React App
+# React template for animal lovers
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-In the project directory, you can run:
+Please run
+
+### `npm install`
 
 ### `npm start`
 
