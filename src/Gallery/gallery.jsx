@@ -43,7 +43,7 @@ class Gallery extends Component {
       <div>
         <p className="text-center subtitle">Gallery</p>
         <OwlCarousel
-          class="owl-carousel owl-theme owl-loaded"
+          className="owl-carousel owl-theme owl-loaded"
           margin={10}
           nav={true}
           dots={false}
