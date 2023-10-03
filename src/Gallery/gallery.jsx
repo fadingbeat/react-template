@@ -26,9 +26,12 @@ class Gallery extends Component {
     responsive: {
       0: {
         items: 1,
+        center: true,
+        margin: 50,
       },
       450: {
         items: 1,
+        center: true,
       },
       600: {
         items: 2,
@@ -47,6 +50,7 @@ class Gallery extends Component {
           margin={10}
           nav={true}
           dots={false}
+          autoWidth={true}
           navContainerClass={true}
           responsiveClass={true}
           responsive={this.state.responsive}
