@@ -2,11 +2,7 @@ import { Component } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
 import Image from "react-bootstrap/Image";
-import Rectanglegallery from "../Assets/gallery/Rectanglegallery.png";
-import Rectangle2gallery from "../Assets/gallery/Rectangle2gallery.png";
-import Rectangle3gallery from "../Assets/gallery/Rectangle3gallery.png";
 
 import img_1gallery from "../Assets/gallery/img_1gallery.png";
 import img_2gallery from "../Assets/gallery/img_2gallery.png";
@@ -17,79 +13,145 @@ import img_6gallery from "../Assets/gallery/img_6gallery.png";
 import img_7gallery from "../Assets/gallery/img_7gallery.png";
 import img_8gallery from "../Assets/gallery/img_8gallery.png";
 
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-
 class Gallery extends Component {
   state = {
-    responsive: {
-      0: {
-        items: 1,
-        center: true,
-        margin: 50,
-      },
-      450: {
-        items: 1,
-        center: true,
-      },
-      600: {
-        items: 2,
-      },
-      1000: {
-        items: 3,
-      },
-    },
+    images: [
+      "Rectanglegallery.png",
+      "Rectangle2gallery.png",
+      "Rectangle3gallery.png",
+    ],
+    currentIndex: 0,
   };
+  galleryImages = [
+    {
+      id: 0,
+      img: "img1",
+      src: img_1gallery,
+    },
+    {
+      id: 1,
+      img: "img2",
+      src: img_2gallery,
+    },
+    {
+      id: 2,
+      img: "img3",
+      src: img_3gallery,
+    },
+    {
+      id: 3,
+      img: "img4",
+      src: img_4gallery,
+    },
+    {
+      id: 4,
+      img: "img5",
+      src: img_5gallery,
+    },
+    {
+      id: 5,
+      img: "img6",
+      src: img_6gallery,
+    },
+    {
+      id: 6,
+      img: "img7",
+      src: img_7gallery,
+    },
+    {
+      id: 7,
+      img: "img8",
+      src: img_8gallery,
+    },
+  ];
+  galleryRowOne;
+  galleryRowTwo;
+
+  nextSlide = () => {
+    const lastIndex = (this.state.currentIndex + 2) % this.state.images.length;
+    const index = lastIndex < this.state.images.length ? lastIndex : 0;
+    this.setState({
+      currentIndex: index,
+    });
+  };
+
+  prevSlide = () => {
+    const firstIndex =
+      this.state.currentIndex === 0
+        ? this.state.images.length - 1
+        : this.state.currentIndex - 1;
+    this.setState({
+      currentIndex: firstIndex,
+    });
+  };
+
   render() {
+    console.log(this.galleryImages);
+    const firstIndex = this.state.currentIndex;
+    const secondIndex =
+      (this.state.currentIndex + 1) % this.state.images.length;
+    const thirdIndex = (this.state.currentIndex + 2) % this.state.images.length;
     return (
       <div>
         <p className="text-center subtitle">Gallery</p>
-        <OwlCarousel
-          className="owl-carousel owl-theme owl-loaded"
-          margin={10}
-          nav={true}
-          dots={false}
-          autoWidth={true}
-          navContainerClass={true}
-          responsiveClass={true}
-          responsive={this.state.responsive}
-        >
-          <Image src={Rectangle3gallery} />
-          <Image src={Rectanglegallery} />
-          <Image src={Rectangle2gallery} />
-        </OwlCarousel>
-
-        <Container>
-          <Row xs={2} sm={4} md={4} xl={4} style={{ paddingBottom: "30px" }}>
-            <Col>
-              <Image className="col-image" src={img_1gallery} fluid />
-            </Col>
-            <Col>
-              <Image className="col-image" src={img_2gallery} fluid />
-            </Col>
-            <Col>
-              <Image className="col-image" src={img_3gallery} fluid />
-            </Col>
-            <Col>
-              <Image className="col-image" src={img_4gallery} fluid />
-            </Col>
-          </Row>
-          <Row xs={2} sm={4} md={4} xl={4} style={{ paddingBottom: "30px" }}>
-            <Col>
-              <Image className="col-image" src={img_5gallery} fluid />
-            </Col>
-            <Col>
-              <Image className="col-image" src={img_6gallery} fluid />
-            </Col>
-            <Col>
-              <Image className="col-image" src={img_7gallery} fluid />
-            </Col>
-            <Col>
-              <Image className="col-image" src={img_8gallery} fluid />
-            </Col>
-          </Row>
-        </Container>
+        <div className="gallery-slider">
+          <div className="slider-images">
+            <img
+              src={require(`../Assets/gallery/${this.state.images[firstIndex]}`)}
+              alt="First"
+            />
+            <img
+              src={require(`../Assets/gallery/${this.state.images[secondIndex]}`)}
+              alt="Second"
+            />
+            <img
+              src={require(`../Assets/gallery/${this.state.images[thirdIndex]}`)}
+              alt="Third"
+            />
+          </div>
+          <div className="slider-navigation">
+            <button onClick={this.prevSlide}>Prev</button>
+            <button onClick={this.nextSlide}>Next</button>
+          </div>
+        </div>
+        {
+          ((this.galleryRowOne = this.galleryImages.slice(0, 4)),
+          (
+            <Container>
+              <Row xs={2} sm={4} md={4} xl={4}>
+                {this.galleryRowOne.map((img) => {
+                  return (
+                    <Image
+                      className="col-image"
+                      key={img.id}
+                      src={img.src}
+                      fluid
+                    />
+                  );
+                })}
+              </Row>
+            </Container>
+          ))
+        }
+        {
+          ((this.galleryRowTwo = this.galleryImages.slice(4, 8)),
+          (
+            <Container>
+              <Row xs={2} sm={4} md={4} xl={4}>
+                {this.galleryRowTwo.map((img) => {
+                  return (
+                    <Image
+                      className="col-image"
+                      key={img.id}
+                      src={img.src}
+                      fluid
+                    />
+                  );
+                })}
+              </Row>
+            </Container>
+          ))
+        }
       </div>
     );
   }
