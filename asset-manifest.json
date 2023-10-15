@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/react-template/static/css/main.c1ece44c.css",
+    "main.js": "/react-template/static/js/main.fd70ceb4.js",
+    "static/js/787.56d2a462.chunk.js": "/react-template/static/js/787.56d2a462.chunk.js",
+    "static/media/headline_imagecontent.png": "/react-template/static/media/headline_imagecontent.f6931f84aaef9db7e48e.png",
+    "static/media/Rectanglegallery.png": "/react-template/static/media/Rectanglegallery.ef98b679651efa37cbad.png",
+    "static/media/meowcontent.png": "/react-template/static/media/meowcontent.e874ac84b7da420382b6.png",
+    "static/media/woofcontent.png": "/react-template/static/media/woofcontent.85b79b377dc275f3ab1c.png",
+    "static/media/Rectangle2gallery.png": "/react-template/static/media/Rectangle2gallery.dec73aff81841332b74f.png",
+    "static/media/Rectangle3gallery.png": "/react-template/static/media/Rectangle3gallery.87ed3d3e141746a714f2.png",
+    "static/media/img_7gallery.png": "/react-template/static/media/img_7gallery.dfd4d9dc560abbf8391e.png",
+    "static/media/img_6gallery.png": "/react-template/static/media/img_6gallery.56c251e941148b225b2a.png",
+    "static/media/img_3gallery.png": "/react-template/static/media/img_3gallery.de93d4bb61d7b7be1bbc.png",
+    "static/media/img_1gallery.png": "/react-template/static/media/img_1gallery.410b46f9b923eafa6339.png",
+    "static/media/img_5gallery.png": "/react-template/static/media/img_5gallery.ffbc17a3ac068af2c730.png",
+    "static/media/img_8gallery.png": "/react-template/static/media/img_8gallery.d8fde0f8b055627144a4.png",
+    "static/media/img_2gallery.png": "/react-template/static/media/img_2gallery.ea1e9a971f1afc4bf583.png",
+    "static/media/img_4gallery.png": "/react-template/static/media/img_4gallery.0f8fe844133db0e48e3f.png",
+    "index.html": "/react-template/index.html",
+    "main.c1ece44c.css.map": "/react-template/static/css/main.c1ece44c.css.map",
+    "main.fd70ceb4.js.map": "/react-template/static/js/main.fd70ceb4.js.map",
+    "787.56d2a462.chunk.js.map": "/react-template/static/js/787.56d2a462.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1ece44c.css",
+    "static/js/main.fd70ceb4.js"
+  ]
+}
